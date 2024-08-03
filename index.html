@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to HTML Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Credit Card Data</h1>
+    <table id="cardTable">
+        <thead>
+            <tr>
+                <th>Issuer</th>
+                <th>Card Name</th>
+                <th>Category</th>
+                <th>Minimum Spend Amount</th>
+                <th>Reward Points Earned</th>
+                <th>Cashback Received</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // JSON data
+        async function loadTableData() {
+            try {
+                const response = await fetch('./data.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const jsonData = await response.json();
+                const tableBody = document.getElementById('cardTable').getElementsByTagName('tbody')[0];
+                jsonData.forEach(item => {
+                    const row = tableBody.insertRow();
+                    Object.keys(item).forEach(key => {
+                        const cell = row.insertCell();
+                        cell.textContent = item[key];
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading or parsing JSON:', error);
+            }
+        }
+        window.onload = loadTableData;
+    </script>
+</body>
+</html>
