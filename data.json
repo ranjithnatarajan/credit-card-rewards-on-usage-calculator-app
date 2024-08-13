@@ -1,0 +1,226 @@
+[
+    {
+        "issuer": "ICICI",
+        "cardName": "AmazonPay",
+        "category": "Prime",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 5,
+        "cashbackReceived": 5
+    },
+    {
+        "issuer": "ICICI",
+        "cardName": "AmazonPay",
+        "category": "Partner brands 2x",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 2,
+        "cashbackReceived": 2
+    },
+    {
+        "issuer": "ICICI",
+        "cardName": "AmazonPay",
+        "category": "All",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 1,
+        "cashbackReceived": 1
+    },
+    {
+        "issuer": "HDFC",
+        "cardName": "Diners Privilage",
+        "category": "Smartbuy",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 40,
+        "cashbackReceived": 20
+    },
+    {
+        "issuer": "HDFC",
+        "cardName": "Diners Privilage",
+        "category": "Swiggy & zomato",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 20,
+        "cashbackReceived": 10
+    },
+    {
+        "issuer": "HDFC",
+        "cardName": "Diners Privilage",
+        "category": "All",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 4,
+        "cashbackReceived": 2
+    },
+    {
+        "issuer": "HDFC",
+        "cardName": "Diners Privilage",
+        "category": "Rent",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "HDFC",
+        "cardName": "Diners Privilage",
+        "category": "Government",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Train booking",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 20,
+        "cashbackReceived": 5
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Online spends",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 10,
+        "cashbackReceived": 2.5
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Offline spends",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 5,
+        "cashbackReceived": 1.25
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Fuel",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Rent",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Wallet",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Insurance",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "AU",
+        "cardName": "Ixigo",
+        "category": "Jewellery",
+        "minimumSpendAmount": 200,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "Federal",
+        "cardName": "One",
+        "category": "All",
+        "minimumSpendAmount": 1,
+        "rewardPointsEarned": 0.02,
+        "cashbackReceived": 0.002
+    },
+    {
+        "issuer": "ICICI",
+        "cardName": "Rubyx",
+        "category": "All",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 2,
+        "cashbackReceived": 0.5
+    },
+    {
+        "issuer": "ICICI",
+        "cardName": "Rubyx",
+        "category": "Utilities",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 1,
+        "cashbackReceived": 0.25
+    },
+    {
+        "issuer": "ICICI",
+        "cardName": "Rubyx",
+        "category": "Insurance",
+        "minimumSpendAmount": 100,
+        "rewardPointsEarned": 1,
+        "cashbackReceived": 0.25
+    },
+    {
+        "issuer": "PNB",
+        "cardName": "Select",
+        "category": "All",
+        "minimumSpendAmount": 150,
+        "rewardPointsEarned": 2,
+        "cashbackReceived": 1
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "Partner brands 10x",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 10,
+        "cashbackReceived": 2.5
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "Partner brands 5x",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 5,
+        "cashbackReceived": 1.25
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "All",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 1,
+        "cashbackReceived": 0.25
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "Fuel",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "Insurance",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "EMI",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    },
+    {
+        "issuer": "Amex",
+        "cardName": "SmartEarn",
+        "category": "Utilities",
+        "minimumSpendAmount": 50,
+        "rewardPointsEarned": 0,
+        "cashbackReceived": 0
+    }
+]
