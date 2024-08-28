@@ -17,7 +17,11 @@ function populateTable(data) {
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td>${item.issuer}</td>
             <td>${item.cardName}</td>
+            <td>${item.category}</td>
+            <td>${item.minimumSpendAmount}</td>
+            <td>${item.rewardPointsEarned}</td>
             <td>${item.cashbackReceived}</td>
         `;
         tableBody.appendChild(row);
