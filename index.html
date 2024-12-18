@@ -3,22 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sort Table</title>
+    <title>Credit Card Cashback Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-    <button onclick="sortTable('desc')">Sort High to Low</button>
-    <button onclick="sortTable('asc')">Sort Low to High</button>
-    <table id="dataTable">
+    <h1>Credit Card Cashback Tracker</h1>
+    
+    <div class="input-container">
+        <input type="number" id="inputAmount" placeholder="Enter Amount" />
+        <button onclick="calculateCashback()">Calculate Cashback</button>
+    </div>
+
+    <table id="cashbackTable">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Cashback Received</th>
+                <th onclick="sortTable(0)">Card Name</th>
+                <th onclick="sortTable(1)">Category</th>
+                <th onclick="sortTable(2)">Rounded Amount (₹)</th>
+                <th onclick="sortTable(3)">Divided Value</th>
+                <th onclick="sortTable(4)">CBR (₹)</th> <!-- New Column for CBR -->
+                <th onclick="sortTable(5)">Rewards Name</th> <!-- New Column for Rewards Name -->
+                <th onclick="sortTable(6)">Rewards Calculator (₹)</th> <!-- New Column for Rewards Calculator -->
+                <th onclick="sortTable(7)">Cashback (₹)</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Data will be populated here -->
         </tbody>
     </table>
+
+    <!-- Settings Button -->
+    <button id="settingsButton" onclick="openPopup()">
+        <i class="fas fa-cog"></i> <!-- Gear icon -->
+    </button>
+
+    <!-- Popup Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Customize Colors</h2>
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#f0f4f8"><br>
+
+            <label for="textColor">Text Color:</label>
+            <input type="color" id="textColor" value="#333"><br>
+
+            <label for="headerBgColor">Table Header Background Color:</label>
+            <input type="color" id="headerBgColor" value="#34495e"><br>
+
+            <label for="headerTextColor">Table Header Text Color:</label>
+            <input type="color" id="headerTextColor" value="#ffffff"><br>
+
+            <label for="buttonBgColor">Button Background Color:</label>
+            <input type="color" id="buttonBgColor" value="#3498db"><br>
+
+            <label for="buttonTextColor">Button Text Color:</label>
+            <input type="color" id="buttonTextColor" value="#ffffff"><br>
+
+            <button onclick="applySettings()">Apply Settings</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
