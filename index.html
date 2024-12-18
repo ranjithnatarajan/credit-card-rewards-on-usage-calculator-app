@@ -53,6 +53,19 @@
             <input type="color" id="buttonBgColor" value="#3498db">
             <label for="buttonTextColor">Button Text Color:</label>
             <input type="color" id="buttonTextColor" value="#ffffff">
+
+            <h3>Show/Hide Table Columns</h3>
+            <div>
+                <input type="checkbox" id="toggleCardName" checked onchange="toggleColumn(0)"> Card Name
+                <input type="checkbox" id="toggleCategory" checked onchange="toggleColumn(1)"> Category
+                <input type="checkbox" id="toggleRoundedAmount" checked onchange="toggleColumn(2)"> Rounded Amount (₹)
+                <input type="checkbox" id="toggleDividedValue" checked onchange="toggleColumn(3)"> Divided Value
+                <input type="checkbox" id="toggleCBR" checked onchange="toggleColumn(4)"> CBR (₹)
+                <input type="checkbox" id="toggleRewardsName" checked onchange="toggleColumn(5)"> Rewards Name
+                <input type="checkbox" id="toggleRewardsCalculator" checked onchange="toggleColumn(6)"> Rewards Calculator (₹)
+                <input type="checkbox" id="toggleCashback" checked onchange="toggleColumn(7)"> Cashback (₹)
+            </div>
+
             <button onclick="applySettings()">Apply Settings</button>
         </div>
     </div>
