@@ -93,6 +93,7 @@ row.style.display = matches ? '' : 'none'; // Show or hide row based on match
 
 function openPopup() {
 document.getElementById('settingsModal').style.display = 'block';
+showTab('ui'); // Show UI tab by default
 }
 
 function closePopup() {
@@ -201,4 +202,21 @@ function toggleColumn(columnIndex) {
      cell.style.display =
          isVisible ? 'none' : '';
  });
+}
+
+// Function to show selected tab content and hide others
+function showTab(tabName) {
+ const tabs = document.querySelectorAll('.tab-content');
+ const buttons = document.querySelectorAll('.tab-button');
+
+ tabs.forEach(tab => tab.classList.remove('active'));
+ buttons.forEach(button => button.classList.remove('active'));
+
+ if(tabName === 'ui') {  
+     document.getElementById('uiTab').classList.add('active');
+     buttons[0].classList.add('active');
+ } else if(tabName === 'table') {  
+     document.getElementById('tableTab').classList.add('active');
+     buttons[1].classList.add('active');
+ }
 }

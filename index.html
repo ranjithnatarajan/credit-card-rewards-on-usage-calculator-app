@@ -42,32 +42,46 @@
     <div id="settingsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Customize Colors</h2>
-            <label for="bgColor">Background Color:</label>
-            <input type="color" id="bgColor" value="#f0f4f8">
-            <label for="textColor">Text Color:</label>
-            <input type="color" id="textColor" value="#333">
-            <label for="headerBgColor">Table Header Background Color:</label>
-            <input type="color" id="headerBgColor" value="#34495e">
-            <label for="headerTextColor">Table Header Text Color:</label>
-            <input type="color" id="headerTextColor" value="#ffffff">
-            <label for="buttonBgColor">Button Background Color:</label>
-            <input type="color" id="buttonBgColor" value="#3498db">
-            <label for="buttonTextColor">Button Text Color:</label>
-            <input type="color" id="buttonTextColor" value="#ffffff">
 
-            <h3>Show/Hide Table Columns</h3>
-            <div>
-                <input type="checkbox" id="toggleCardName" checked onchange="toggleColumn(0)"> Card Name
-                <input type="checkbox" id="toggleCategory" checked onchange="toggleColumn(1)"> Category
-                <input type="checkbox" id="toggleRoundedAmount" checked onchange="toggleColumn(2)"> Rounded Amount (₹)
-                <input type="checkbox" id="toggleDividedValue" checked onchange="toggleColumn(3)"> Divided Value
-                <input type="checkbox" id="toggleCBR" checked onchange="toggleColumn(4)"> CBR (₹)
-                <input type="checkbox" id="toggleRewardsName" checked onchange="toggleColumn(5)"> Rewards Name
-                <input type="checkbox" id="toggleRewardsCalculator" checked onchange="toggleColumn(6)"> Rewards Calculator (₹)
-                <input type="checkbox" id="toggleCashback" checked onchange="toggleColumn(7)"> Cashback (₹)
+            <!-- Tabs for UI and Table -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('ui')">UI</button>
+                <button class="tab-button" onclick="showTab('table')">Table</button>
             </div>
 
+            <!-- UI Tab Content -->
+            <div id="uiTab" class="tab-content active">
+                <h2>Customize Colors</h2>
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColor" value="#f0f4f8">
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor" value="#333">
+                <label for="headerBgColor">Table Header Background Color:</label>
+                <input type="color" id="headerBgColor" value="#34495e">
+                <label for="headerTextColor">Table Header Text Color:</label>
+                <input type="color" id="headerTextColor" value="#ffffff">
+                <label for="buttonBgColor">Button Background Color:</label>
+                <input type="color" id="buttonBgColor" value="#3498db">
+                <label for="buttonTextColor">Button Text Color:</label>
+                <input type="color" id="buttonTextColor" value="#ffffff">
+            </div>
+
+            <!-- Table Tab Content -->
+            <div id="tableTab" class="tab-content">
+                <h3>Show/Hide Table Columns</h3>
+                <div>
+                    <input type="checkbox" id="toggleCardName" checked onchange="toggleColumn(0)"> Card Name
+                    <input type="checkbox" id="toggleCategory" checked onchange="toggleColumn(1)"> Category
+                    <input type="checkbox" id="toggleRoundedAmount" checked onchange="toggleColumn(2)"> Rounded Amount (₹)
+                    <input type="checkbox" id="toggleDividedValue" checked onchange="toggleColumn(3)"> Divided Value
+                    <input type="checkbox" id="toggleCBR" checked onchange="toggleColumn(4)"> CBR (₹)
+                    <input type="checkbox" id="toggleRewardsName" checked onchange="toggleColumn(5)"> Rewards Name
+                    <input type="checkbox" id="toggleRewardsCalculator" checked onchange="toggleColumn(6)"> Rewards Calculator (₹)
+                    <input type="checkbox" id="toggleCashback" checked onchange="toggleColumn(7)"> Cashback (₹)
+                </div>
+            </div>
+
+            <!-- Apply Settings Button -->
             <button onclick="applySettings()">Apply Settings</button>
         </div>
     </div>

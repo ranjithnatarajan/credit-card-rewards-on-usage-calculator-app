@@ -119,25 +119,53 @@ tr:hover {
    margin-top:0; 
 }
 
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border:none;
+    cursor:pointer;
+}
+
+.tab-button.active {
+    background-color:#2980b9; /* Active tab color */
+}
+
+.tab-content {
+    display:none; /* Hide all tab contents by default */
+}
+
+.tab-content.active {
+    display:block; /* Show active tab content */
+}
+
+/* Label and Input Styles */
 label {
    display:block; 
-   margin-bottom:5px; 
+   margin-bottom:.5rem; 
 }
 
 input[type='color'] {
-   margin-bottom:15px; 
+   margin-bottom:.5rem; 
 }
 
 /* Checkbox styling */
 .modal-content div {
-   margin-bottom:15px; 
+   margin-bottom:.5rem; 
 }
 
 /* Close button styling */
 .close {
    color:#aaa; 
    float:right; 
-   font-size:28px; 
+   font-size:.9rem; 
    font-weight:bold; 
    cursor:pointer; 
 }
