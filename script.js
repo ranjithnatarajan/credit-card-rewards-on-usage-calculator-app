@@ -8,22 +8,6 @@ fetch('data.json') // Ensure this matches your actual filename
     })
     .catch(error => console.error('Error fetching card data:', error));
 
-<<<<<<< Updated upstream
-function populateTable(data) {
-    const tableBody = document.querySelector('#dataTable tbody');
-    tableBody.innerHTML = '';
-    data.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.issuer}</td>
-            <td>${item.cardName}</td>
-            <td>${item.category}</td>
-            <td>${item.minimumSpendAmount}</td>
-            <td>${item.rewardPointsEarned}</td>
-            <td>${item.cashbackReceived}</td>
-        `;
-        tableBody.appendChild(row);
-=======
 function calculateCashback() {
     const amount = parseFloat(document.getElementById('inputAmount').value);
     
@@ -70,7 +54,6 @@ function calculateCashback() {
             const row = `<tr><td>${card.name}</td><td>${category}</td><td>₹${roundedAmount}</td><td>${dividedValue}</td><td>₹${cbr}</td><td>${rewardsName || '-'}</td><td>₹${highestRewardRate.toFixed(2) || '0'}</td><td>₹${cashback}</td></tr>`;
             tbody.innerHTML += row; // Append each row to the table body
         });
->>>>>>> Stashed changes
     });
 }
 
