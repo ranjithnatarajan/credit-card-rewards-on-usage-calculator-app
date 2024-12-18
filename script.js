@@ -39,18 +39,11 @@ function calculateCashback() {
         }
 
         Object.entries(rates).forEach(([category, rate]) => {
-            let cashback;
-
-            if (card.isCashback) {
-                // Calculate cashback directly as a percentage of the rounded amount
-                cashback = (roundedAmount * (rate / 100)).toFixed(2); // Cashback as a percentage
-            } else {
-                // For non-cashback cards, calculate based on rewards calculator
-                const cbr = (dividedValue * rate).toFixed(2); // CBR calculation
-                cashback = (cbr * highestRewardRate).toFixed(2); // Calculate cashback based on CBR and highest reward rate
-            }
-            
             const cbr = (dividedValue * rate).toFixed(2); // CBR calculation
+            
+            // Calculate cashback as the product of CBR and highest reward rate
+            const cashback = (cbr * highestRewardRate).toFixed(3); 
+
             const row = `<tr><td>${card.name}</td><td>${category}</td><td>₹${roundedAmount}</td><td>${dividedValue}</td><td>₹${cbr}</td><td>${rewardsName || '-'}</td><td>₹${highestRewardRate.toFixed(2) || '0'}</td><td>₹${cashback}</td></tr>`;
             tbody.innerHTML += row; // Append each row to the table body
         });
