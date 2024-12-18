@@ -42,30 +42,36 @@ h1 {
 }
 
 /* Table Styling */
+.table-scroll-container {
+   max-height: 300px; /* Set desired height */
+   overflow-y: auto; /* Enable vertical scrolling */
+   margin-top: 20px; /* Space above the table */
+   border: 1px solid #ddd; /* Optional border around the scrollable area */
+}
+
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+   width: 100%;
+   border-collapse: collapse;
 }
 
 thead {
-    background-color: #34495e;
-    color: white;
+   background-color: #34495e;
+   color: white;
 }
 
 th,
 td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+   padding: 12px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
 }
 
 th {
-    cursor: pointer;
+   cursor: pointer;
 }
 
 tr:hover {
-    background-color: #f2f2f2;
+   background-color: #f2f2f2;
 }
 
 /* Settings Button */

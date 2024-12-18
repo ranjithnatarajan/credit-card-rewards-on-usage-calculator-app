@@ -4,7 +4,7 @@ let creditCards = []; // Initialize an empty array for credit cards
 fetch('data.json') // Ensure this matches your actual filename
 .then(response => response.json())
 .then(data => {
-   creditCards = data.cards; // Assign fetched cards to creditCards variable
+    creditCards = data.cards; // Assign fetched cards to creditCards variable
 })
 .catch(error => console.error('Error fetching card data:', error));
 
@@ -16,7 +16,7 @@ alert("Please enter a valid amount.");
 return;
 }
 
-const tbody = document.querySelector('#cashbackTable tbody');
+const tbody = document.querySelector('#cashbackTableBody');
 tbody.innerHTML = ''; // Clear previous results
 
 creditCards.forEach(card => {
