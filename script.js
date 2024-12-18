@@ -44,37 +44,51 @@ function calculateCashback() {
             // Calculate cashback as the product of CBR and highest reward rate
             const cashback = (cbr * highestRewardRate).toFixed(3); 
 
-            const row = `<tr>
-                <td>${card.name}</td>
-                <td>${category}</td>
-                <td>₹${roundedAmount}</td>
-                <td>${dividedValue}</td>
-                <td>₹${cbr}</td>
-                <td>${rewardsName || '-'}</td>
-                <td>₹${highestRewardRate.toFixed(2) || '0'}</td>
-                <td>₹${cashback}</td>
-            </tr>`;
+            const row = `<tr><td>${card.name}</td><td>${category}</td><td>₹${roundedAmount}</td><td>${dividedValue}</td><td>₹${cbr}</td><td>${rewardsName || '-'}</td><td>₹${highestRewardRate.toFixed(2) || '0'}</td><td>₹${cashback}</td></tr>`;
             tbody.innerHTML += row; // Append each row to the table body
         });
     });
 
-    // Explicitly sort cashback column in descending order
-    sortCashbackDescending();
+    // Automatically sort the table by cashback column (columnIndex = 7)
+    sortTable(7);
 }
 
-function sortCashbackDescending() {
+// Add persistent search filters to the table
+function addSearchFilters() {
     const table = document.getElementById('cashbackTable');
-    const rows = Array.from(table.rows).slice(1); // Exclude header
+    const headerRow = table.querySelector('thead tr');
 
-    // Sort rows by the cashback column (index 7) in descending order
-    rows.sort((a, b) => {
-        const cashbackA = parseFloat(a.cells[7].textContent.replace('₹', '').trim());
-        const cashbackB = parseFloat(b.cells[7].textContent.replace('₹', '').trim());
-        return cashbackB - cashbackA; // Descending order
+    // Add search row only if it doesn't exist
+    if (!table.querySelector('thead .filter-row')) {
+        const searchRow = document.createElement('tr');
+        searchRow.classList.add('filter-row');
+
+        Array.from(headerRow.cells).forEach((cell, columnIndex) => {
+            const searchCell = document.createElement('th');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = `Search ${cell.textContent}`;
+            input.oninput = () => filterTableByColumn(columnIndex, input.value);
+
+            searchCell.appendChild(input);
+            searchRow.appendChild(searchCell);
+        });
+
+        headerRow.after(searchRow); // Insert search row after header row
+    }
+}
+
+function filterTableByColumn(columnIndex, filterValue) {
+    const table = document.getElementById('cashbackTable');
+    const rows = Array.from(table.tBodies[0].rows);
+
+    rows.forEach(row => {
+        const cell = row.cells[columnIndex];
+        const cellText = cell.textContent.toLowerCase();
+        const matches = cellText.includes(filterValue.toLowerCase());
+
+        row.style.display = matches ? '' : 'none'; // Show or hide row based on match
     });
-
-    // Reattach sorted rows to the table
-    rows.forEach(row => table.tBodies[0].appendChild(row));
 }
 
 function openPopup() {
@@ -130,7 +144,7 @@ document.getElementById('inputAmount').addEventListener('keypress', function(eve
 // Sorting function for table columns
 function sortTable(columnIndex) {
    const table = document.getElementById("cashbackTable");
-   const rows = Array.from(table.rows).slice(1); // Exclude header
+   const rows = Array.from(table.rows).slice(2); // Exclude header and filter row
    const isAscending = table.rows[0].cells[columnIndex].classList.toggle("asc");
 
    rows.sort((a, b) => {
@@ -142,5 +156,8 @@ function sortTable(columnIndex) {
            : (isAscending ? aText.localeCompare(bText) : bText.localeCompare(aText));
    });
 
-   rows.forEach(row => table.appendChild(row)); // Reattach sorted rows
+   rows.forEach(row => table.tBodies[0].appendChild(row)); // Reattach sorted rows
 }
+
+// Ensure filters are added on page load
+document.addEventListener('DOMContentLoaded', addSearchFilters);
