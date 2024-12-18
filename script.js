@@ -44,13 +44,39 @@ function calculateCashback() {
             // Calculate cashback as the product of CBR and highest reward rate
             const cashback = (cbr * highestRewardRate).toFixed(3); 
 
-            const row = `<tr><td>${card.name}</td><td>${category}</td><td>₹${roundedAmount}</td><td>${dividedValue}</td><td>₹${cbr}</td><td>${rewardsName || '-'}</td><td>₹${highestRewardRate.toFixed(2) || '0'}</td><td>₹${cashback}</td></tr>`;
+            const row = `<tr>
+                <td>${card.name}</td>
+                <td>${category}</td>
+                <td>₹${roundedAmount}</td>
+                <td>${dividedValue}</td>
+                <td>₹${cbr}</td>
+                <td>${rewardsName || '-'}</td>
+                <td>₹${highestRewardRate.toFixed(2) || '0'}</td>
+                <td>₹${cashback}</td>
+            </tr>`;
             tbody.innerHTML += row; // Append each row to the table body
         });
     });
+
+    // Explicitly sort cashback column in descending order
+    sortCashbackDescending();
 }
 
-// The rest of your functions remain unchanged...
+function sortCashbackDescending() {
+    const table = document.getElementById('cashbackTable');
+    const rows = Array.from(table.rows).slice(1); // Exclude header
+
+    // Sort rows by the cashback column (index 7) in descending order
+    rows.sort((a, b) => {
+        const cashbackA = parseFloat(a.cells[7].textContent.replace('₹', '').trim());
+        const cashbackB = parseFloat(b.cells[7].textContent.replace('₹', '').trim());
+        return cashbackB - cashbackA; // Descending order
+    });
+
+    // Reattach sorted rows to the table
+    rows.forEach(row => table.tBodies[0].appendChild(row));
+}
+
 function openPopup() {
     document.getElementById('settingsModal').style.display = 'block';
 }
