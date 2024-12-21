@@ -5,62 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Cashback Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Credit Card Cashback Tracker</h1>
-    
+
     <div class="input-container">
         <input type="number" id="inputAmount" placeholder="Enter Amount" />
         <button onclick="calculateCashback()">Calculate Cashback</button>
     </div>
 
-    <table id="cashbackTable">
-        <thead>
-            <tr>
-                <th onclick="sortTable(0)">Card Name</th>
-                <th onclick="sortTable(1)">Category</th>
-                <th onclick="sortTable(2)">Rounded Amount (₹)</th>
-                <th onclick="sortTable(3)">Divided Value</th>
-                <th onclick="sortTable(4)">CBR (₹)</th> <!-- New Column for CBR -->
-                <th onclick="sortTable(5)">Rewards Name</th> <!-- New Column for Rewards Name -->
-                <th onclick="sortTable(6)">Rewards Calculator (₹)</th> <!-- New Column for Rewards Calculator -->
-                <th onclick="sortTable(7)">Cashback (₹)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be populated here -->
-        </tbody>
-    </table>
+    <div class="table-scroll-container">
+        <table id="cashbackTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Card Name</th>
+                    <th onclick="sortTable(1)">Category</th>
+                    <th onclick="sortTable(2)">Rounded Amount (₹)</th>
+                    <th onclick="sortTable(3)">Divided Value</th>
+                    <th onclick="sortTable(4)">CBR (₹)</th>
+                    <th onclick="sortTable(5)">Rewards Name</th>
+                    <th onclick="sortTable(6)">Rewards Calculator (₹)</th>
+                    <th onclick="sortTable(7)">Cashback (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="cashbackTableBody">
+                <!-- Data populated dynamically -->
+            </tbody>
+        </table>
+    </div>
 
-    <!-- Settings Button -->
     <button id="settingsButton" onclick="openPopup()">
-        <i class="fas fa-cog"></i> <!-- Gear icon -->
+        <i class="fas fa-cog"></i>
     </button>
 
-    <!-- Popup Modal -->
     <div id="settingsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Customize Colors</h2>
-            <label for="bgColor">Background Color:</label>
-            <input type="color" id="bgColor" value="#f0f4f8"><br>
 
-            <label for="textColor">Text Color:</label>
-            <input type="color" id="textColor" value="#333"><br>
+            <!-- Tabs for UI and Table -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('ui')">UI</button>
+                <button class="tab-button" onclick="showTab('table')">Table</button>
+            </div>
 
-            <label for="headerBgColor">Table Header Background Color:</label>
-            <input type="color" id="headerBgColor" value="#34495e"><br>
+            <!-- UI Tab Content -->
+            <div id="uiTab" class="tab-content active">
+                <h2>Customize Colors</h2>
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColor" value="#f0f4f8">
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor" value="#333">
+                <label for="headerBgColor">Table Header Background Color:</label>
+                <input type="color" id="headerBgColor" value="#34495e">
+                <label for="headerTextColor">Table Header Text Color:</label>
+                <input type="color" id="headerTextColor" value="#ffffff">
+                <label for="buttonBgColor">Button Background Color:</label>
+                <input type="color" id="buttonBgColor" value="#3498db">
+                <label for="buttonTextColor">Button Text Color:</label>
+                <input type="color" id="buttonTextColor" value="#ffffff">
+            </div>
 
-            <label for="headerTextColor">Table Header Text Color:</label>
-            <input type="color" id="headerTextColor" value="#ffffff"><br>
+            <!-- Table Tab Content -->
+            <div id="tableTab" class="tab-content">
+                <h3>Show/Hide Table Columns</h3>
+                <div>
+                    <input type="checkbox" id="toggleCardName" checked onchange="toggleColumn(0)"> Card Name
+                    <input type="checkbox" id="toggleCategory" checked onchange="toggleColumn(1)"> Category
+                    <input type="checkbox" id="toggleRoundedAmount" checked onchange="toggleColumn(2)"> Rounded Amount (₹)
+                    <input type="checkbox" id="toggleDividedValue" checked onchange="toggleColumn(3)"> Divided Value
+                    <input type="checkbox" id="toggleCBR" checked onchange="toggleColumn(4)"> CBR (₹)
+                    <input type="checkbox" id="toggleRewardsName" checked onchange="toggleColumn(5)"> Rewards Name
+                    <input type="checkbox" id="toggleRewardsCalculator" checked onchange="toggleColumn(6)"> Rewards Calculator (₹)
+                    <input type="checkbox" id="toggleCashback" checked onchange="toggleColumn(7)"> Cashback (₹)
+                </div>
+            </div>
 
-            <label for="buttonBgColor">Button Background Color:</label>
-            <input type="color" id="buttonBgColor" value="#3498db"><br>
-
-            <label for="buttonTextColor">Button Text Color:</label>
-            <input type="color" id="buttonTextColor" value="#ffffff"><br>
-
+            <!-- Apply Settings Button -->
             <button onclick="applySettings()">Apply Settings</button>
         </div>
     </div>
