@@ -1,7 +1,7 @@
 {
     "cards": [
         {
-            "name": "ICICI",
+            "name": "ICICI AP",
             "isCashback": true,
             "basePurchaseValue": 100,
             "cashbackRates": {
@@ -68,7 +68,7 @@
             }
         },
         {
-            "name": "PNB",
+            "name": "PNB S",
             "isCashback": false,
             "basePurchaseValue": 150,
             "cashbackRates": {
@@ -93,10 +93,314 @@
 
                 "swiggy": 2,
                 "zomato": 2,
-                "smartbuy": 2
+                "smartbuy": 0
             },
             "rewardsCalculator": {
                 "pnbRewards": 0.25
+            }
+        },
+        {
+            "name": "AmEx SE",
+            "isCashback": false,
+            "basePurchaseValue": 50,
+            "cashbackRates": {
+                "amazon": 5,
+                "amazonPartners": 1,
+                "dining": 1,
+                "insurance": 0,
+                "travel": 1,
+
+                "wallet": 1,
+                "atm": 0,
+                "educationFees": 1,
+                "utility": 0,
+                "fuel": 0,
+                "rent": 1,
+
+                "grocery": 1,
+                "departmentalStore": 1,
+                "goverment": 1,
+                "education": 1,
+                "tax": 1,
+
+                "swiggy": 1,
+                "zomato": 10,
+                "smartbuy": 0,
+
+                "easeMyTrip": 10,
+                "Flipkart": 10, 
+                "Myntra": 10, 
+                "BlinkIt": 10, 
+                "Uber": 10, 
+                "Nykaa": 10, 
+                "Ajio": 10, 
+                "PVR":10, 
+                "BookMyShow": 10,
+
+                "gyftr": 2
+            },
+            "rewardsCalculator": {
+                "payCard": 0.25,
+                "instaVouchers": 0.25,
+                "marriotProgram": 1,
+                "travelBooking": 0.25
+            }
+        },
+        {
+            "name": "AmEx Gold",
+            "isCashback": false,
+            "basePurchaseValue": 50,
+            "cashbackRates": {
+                "amazon": 1,
+                "amazonPartners": 1,
+                "dining": 1,
+                "insurance": 0,
+                "travel": 1,
+
+                "wallet": 1,
+                "atm": 0,
+                "educationFees": 1,
+                "utility": 1,
+                "fuel": 1,
+                "rent": 1,
+
+                "grocery": 1,
+                "departmentalStore": 1,
+                "goverment": 1,
+                "education": 1,
+                "tax": 1,
+
+                "swiggy": 1,
+                "zomato": 1,
+                "smartbuy": 0,
+
+                "easeMyTrip": 1,
+                "Flipkart": 5,
+                "Myntra": 5,
+                "BlinkIt": 1,
+                "Uber": 1,
+                "Nykaa": 5,
+                "Ajio": 1,
+                "PVR": 1,
+                "BookMyShow": 1,
+
+                "gyftr": 5
+            },
+            "rewardsCalculator": {
+                "payCard": 0.25,
+                "instaVouchers": 0.25,
+                "marriotProgram": 1,
+                "travelBooking": 0.25
+            }
+        },
+        {
+            "name": "HDFC MB",
+            "isCashback": false,
+            "basePurchaseValue": 150,
+            "cashbackRates": {
+                "amazon": 2,
+                "amazonPartners": 2,
+                "dining": 4,
+                "insurance": 2,
+                "travel": 4,
+
+                "wallet": 0,
+                "atm": 0,
+                "educationFees": 2,
+                "utility": 2,
+                "fuel": 0,
+                "rent": 0,
+
+                "grocery": 2,
+                "departmentalStore": 2,
+                "goverment": 0,
+                "education": 2,
+                "tax": 0,
+
+                "swiggy": 4,
+                "zomato": 4,
+                "smartbuy": 0,
+
+                "easeMyTrip": 4,
+                "Flipkart": 2,
+                "Myntra": 2,
+                "BlinkIt": 2,
+                "Uber": 4,
+                "Nykaa": 2,
+                "Ajio": 2,
+                "PVR": 4,
+                "BookMyShow": 4,
+
+                "gyftr": 2,
+
+                "MarriottHotels": 8
+            },
+            "rewardsCalculator": {
+                "MarriotPoints": 1
+            }
+        },
+        {
+            "name": "HSBC LP",
+            "isCashback": true,
+            "basePurchaseValue": 150,
+            "cashbackRates": {
+                "amazon": 1,
+                "amazonPartners": 1,
+                "dining": 10,
+                "insurance": 0,
+                "travel": 1,
+
+                "wallet": 0,
+                "atm": 0,
+                "educationFees": 0,
+                "utility": 0,
+                "fuel": 0,
+                "rent": 0,
+
+                "grocery": 10,
+                "departmentalStore": 1,
+                "goverment": 0,
+                "education": 0,
+                "tax": 0,
+
+                "swiggy": 10,
+                "zomato": 10,
+                "smartbuy": 0,
+
+                "easeMyTrip": 1,
+                "Flipkart": 1,
+                "Myntra": 1,
+                "BlinkIt": 1,
+                "Uber": 1,
+                "Nykaa": 1,
+                "Ajio": 1,
+                "PVR": 1,
+                "BookMyShow": 1,
+
+                "gyftr": 1,
+
+                "MarriottHotels": 10,
+
+                "jewllery": 0,
+                "bambling": 0,
+                "toll": 0,
+                "forex": 0,
+                "crypto": 0,
+                "charity": 0,
+                "moneyTransfer": 0
+            },
+            "rewardsCalculator": {
+                "payCard": 1
+            }
+        },
+        {
+            "name": "One",
+            "isCashback": false,
+            "basePurchaseValue": 1,
+            "cashbackRates": {
+                "amazon": 0.02,
+                "amazonPartners": 0.02,
+                "dining": 0.02,
+                "insurance": 0.02,
+                "travel": 0.02,
+
+                "wallet": 0.02,
+                "atm": 0.02,
+                "educationFees": 0.02,
+                "utility": 0.02,
+                "fuel": 0.02,
+                "rent": 0.02,
+
+                "grocery": 0.02,
+                "departmentalStore": 0.02,
+                "goverment": 0.02,
+                "education": 0.02,
+                "tax": 0.02,
+
+                "swiggy": 0.02,
+                "zomato": 0.02,
+                "smartbuy": 0,
+
+                "easeMyTrip": 0.02,
+                "Flipkart": 0.02,
+                "Myntra": 0.02,
+                "BlinkIt": 0.02,
+                "Uber": 0.02,
+                "Nykaa": 0.02,
+                "Ajio": 0.02,
+                "PVR": 0.02,
+                "BookMyShow": 0.02,
+
+                "gyftr": 0.02,
+
+                "MarriottHotels": 0.02,
+
+                "jewllery": 0.02,
+                "bambling": 0.02,
+                "toll": 0.02,
+                "forex": 0.02,
+                "crypto": 0.02,
+                "charity": 0.02,
+                "moneyTransfer": 0.02
+            },
+            "rewardsCalculator": {
+                "payCard": 0.05
+            }
+        },
+        {
+            "name": "AU Ixigo",
+            "isCashback": false,
+            "basePurchaseValue": 200,
+            "cashbackRates": {
+                "amazon": 10,
+                "amazonPartners": 10,
+                "dining": 5,
+                "insurance": 0,
+                "travel": 5,
+
+                "wallet": 0,
+                "atm": 0,
+                "educationFees": 5,
+                "utility": 5,
+                "fuel": 0,
+                "rent": 0,
+
+                "grocery": 5,
+                "departmentalStore": 5,
+                "goverment": 5,
+                "education": 5,
+                "tax": 5,
+
+                "swiggy": 10,
+                "zomato": 10,
+                "smartbuy": 0,
+
+                "easeMyTrip": 10,
+                "Flipkart": 10,
+                "Myntra": 10,
+                "BlinkIt": 10,
+                "Uber": 10,
+                "Nykaa": 10,
+                "Ajio": 10,
+                "PVR": 10,
+                "BookMyShow": 10,
+
+                "gyftr": 10,
+
+                "MarriottHotels": 10,
+
+                "jewllery": 0,
+                "bambling": 5,
+                "toll": 5,
+                "forex": 5,
+                "crypto": 5,
+                "charity": 5,
+                "moneyTransfer": 5,
+
+                "ixigoTrain": 20
+            },
+            "rewardsCalculator": {
+                "payCard": 0.25
             }
         }
     ]
