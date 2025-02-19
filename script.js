@@ -159,7 +159,7 @@ const rows =
 Array.from(table.rows).slice(2); // Exclude header and filter row
 
 const isAscending =
-table.rows[0].cells[columnIndex].classList.toggle("asc");
+table.rows[0].cells[columnIndex].classList.toggle("asc", false);
 
 rows.sort((a, b) => {
 const aText =
