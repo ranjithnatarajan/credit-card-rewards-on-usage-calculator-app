@@ -43,7 +43,7 @@ h1 {
 
 /* Table Styling */
 .table-scroll-container {
-   max-height: 300px; /* Set desired height */
+   max-height: calc(100vh - 184px);
    overflow-y: auto; /* Enable vertical scrolling */
    margin-top: 20px; /* Space above the table */
    border: 1px solid #ddd; /* Optional border around the scrollable area */
